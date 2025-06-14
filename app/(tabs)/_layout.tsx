@@ -40,64 +40,39 @@ export default function RootLayout() {
                 height: 55,
                 backgroundColor: '#0f0d23',
                 borderRadius: 50,
-                marginHorizontal: 20,
+                marginHorizontal: 105,
                 marginBottom: 36,
                 position: 'absolute',
                 overflow: 'visible',
-                borderWidth: 0,
                 borderColor: '#0f0d23',
             }}}>
-            <Tabs.Screen
-                name="index"
-                options={{
-                    title: "Home",
-                    headerShown: false,
-                    tabBarIcon: ({ focused }) => (
-                        <TabIcon
-                            focused={focused}
-                            icon={icons.home}
-                            title='Home' />
-                    )
-                }}/>
 
             <Tabs.Screen
-                name="search"
+                name="reminders"
                 options={{
-                    title: "Search",
+                    title: "Reminders",
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             focused={focused}
-                            icon={icons.search}
-                            title='Search' />
-                    )
-                }}/>
-
-            <Tabs.Screen
-                name="saved"
-                options={{
-                    title: "Saved",
-                    headerShown: false,
-                    tabBarIcon: ({ focused }) => (
-                        <TabIcon
-                            focused={focused}
-                            icon={icons.save}
-                            title='Saved' />
+                            icon={icons.bell}
+                            title='Reminders' />
                     )
             }}/>
 
             <Tabs.Screen
-                name="profile"
+                name="videoplayer"
                 options={{
-                    title: "Profile",
+                    title: "Videoplayer",
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             focused={focused}
-                            icon={icons.person}
-                            title='Profile' />
+                            icon={icons.play}
+                            title='Videoplayer' />
                     )
-            }}/>
+                }}/>
+
         </Tabs>
     )
 }

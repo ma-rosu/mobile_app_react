@@ -11,7 +11,7 @@ export default function VideoPlayer() {
     const [stuckCount, setStuckCount] = useState(0);
     const previousPosition = useRef(0);
 
-    // Interval de detecție video blocat
+    
     useEffect(() => {
         const interval = setInterval(async () => {
             if (!videoRef.current || hasError) return;
@@ -43,7 +43,7 @@ export default function VideoPlayer() {
         return () => clearInterval(interval);
     }, [hasError, stuckCount]);
 
-    // Reîncarcă video
+    
     const handleReload = async () => {
         setHasError(false);
         setLoading(true);
